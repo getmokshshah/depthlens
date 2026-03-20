@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+venv/
+env/
+.env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Model weights (downloaded at runtime)
+*.pth
+*.pt
+*.onnx
+hub/
+
+# Data
+*.npy
+results/
+outputs/
+
+# Example images (downloaded at runtime)
+examples/*.jpg
+examples/*.png
+
+# Logs
+*.log
+runs/
