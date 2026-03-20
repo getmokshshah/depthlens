@@ -1,7 +1,7 @@
 ---
 title: DepthLens
 emoji: 🌀
-colorFrom: teal
+colorFrom: green
 colorTo: yellow
 sdk: gradio
 sdk_version: "4.44.1"
