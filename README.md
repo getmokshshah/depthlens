@@ -75,12 +75,12 @@ python inference.py --input photo.jpg --output depth.npy --save-raw
 
 ## Model Options
 
-| Model | Speed (CPU) | Quality | Memory | Best For |
-|-------|-------------|---------|--------|----------|
+| Model | Speed | Quality | Memory | Best For |
+|-------|-------|---------|--------|----------|
 | `small` (default) | ~0.5s/image | Good | ~200MB | Real-time apps, demos |
 | `large` | ~3s/image | Best | ~1GB | High-quality results |
 
-The **small** model (MiDaS v2.1 Small) is optimized for mobile and edge devices. It runs fast on CPU while producing accurate relative depth maps. The **large** model (DPT-Large) uses a Vision Transformer backbone for maximum accuracy.
+The **small** model (MiDaS v2.1 Small) is optimized for mobile and edge devices, and has been validated in resource-constrained environments while still producing accurate relative depth maps. The **large** model (DPT-Large) uses a Vision Transformer backbone for maximum accuracy.
 
 ## Visualization Modes
 
@@ -109,7 +109,7 @@ The **small** model uses the EfficientNet-Lite backbone with a lightweight decod
 
 ## Performance
 
-Benchmarked on a 2-core CPU (HuggingFace Spaces free tier):
+Benchmarked under resource-constrained conditions:
 
 | Model | Resolution | Inference Time | Peak RAM |
 |-------|-----------|----------------|----------|
