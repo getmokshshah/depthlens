@@ -52,6 +52,11 @@ class DepthEstimator:
         """Load the MiDaS model and transforms from PyTorch Hub."""
         print(f"Loading {self.config['description']}...")
 
+        # Pre-trust the rwightman repo that MiDaS_small internally loads via
+        # blocks.py without passing trust_repo=True, which causes an EOFError
+        # in non-interactive environments like HuggingFace Spaces.
+        torch.hub.list("rwightman/gen-efficientnet-pytorch", trust_repo=True)
+
         # Load model
         self.model = torch.hub.load(
             self.config["repo"],
